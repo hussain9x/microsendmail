@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>sa.hussainalsulaiman</groupId>
 	<artifactId>microsendmail</artifactId>
-	<version>0.1</version>
+	<version>0.2</version>
 	<name>MicroSendMail</name>
 	<description>sends mail as an http rest endpoint</description>
 	<properties>
