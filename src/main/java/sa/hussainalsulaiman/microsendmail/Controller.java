@@ -48,9 +48,10 @@ public class Controller {
         if (mimeType != null){
             if (mimeType.equalsIgnoreCase("html")) 
             sendMimeMessage(email.getFrom(), email.getTo(), email.getSubject(), email.getMessage());
+            else sendMail(email.getFrom(), email.getTo(), email.getSubject(), email.getMessage());
             
         } 
-        else sendMail(email.getFrom(), email.getTo(), email.getSubject(), email.getMessage());  
+         
         return new ResponseEntity<String>("ok", HttpStatus.OK);
 
     }
@@ -78,6 +79,7 @@ public class Controller {
             e.printStackTrace();
         }
         javaMailSender.send(message);
+    }
 
 
 

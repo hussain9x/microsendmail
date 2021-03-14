@@ -1,6 +1,20 @@
 # microsendmail
 ###### This is an HTTP microservice for sending emails. You need to have an SMTP server that this service will connect to.
 
+### Usage
+
+###### This application accepts http POST requests comprising of the following
+###### HTTP Headers  
+Content-Type (Required): Must be "application/json"
+Mime-Type (Required): use "html" to send html based content, or any other value will send a simple text email (but do not leave it empty)
+
+###### HTTP Request Content
+The content must be a json object comprising of the following fields (all required):
+from (single string): the sender's email address (must match one of authenticated accounts in the smtp server)
+to (single string): the recepient email address.
+subject: the subject of the email message.
+message: the message body content. ( you need to include the <html> tags yourself in case of sending html content.)
+
 ###### To build a jar file from the source code on Linux/Unix machine, 
 
 ```
