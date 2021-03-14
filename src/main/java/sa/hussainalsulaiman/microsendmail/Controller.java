@@ -74,9 +74,12 @@ public class Controller {
         } catch (MessagingException e) {
             e.printStackTrace();
         }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         javaMailSender.send(message);
 
-    }
+
 
     /**
      * This method sends a simple email (non-html)
