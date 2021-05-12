@@ -1,5 +1,6 @@
 target/
 runWithConf.sh
+runAisConf.sh
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

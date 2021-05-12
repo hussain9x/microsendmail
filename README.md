@@ -36,12 +36,13 @@ SMTP_PORT       "This will be '587' if not provided"
 SMTP_USERNAME   "This is required if SMTP_Auth=true"
 SMTP_PASSWORD   "This is required if SMTP_Auth=true"
 SMTP_AUTH       "This will be 'true' if not provided"
+SMTP_TLS.       "This will be 'true' if not provided"
 LISTEN_PORT     "This will be '80' if not provided"
 ```
 
 ###### To run a container from the docker image,
 
 ```
-docker run -d --name ContainerName -e SMTP_HOST=smtp -e SMTP_USERNAME=username -e SMTP_PASSWORD=password user/repo:versionTag
+docker run -d --name=<DESIRED_CONTAINER_NAME> -e SMTP_HOST=<YOUR_SMTP_SERVER_ADDRESS> -e SMTP_USERNAME=<USERNAME> -e SMTP_PASSWORD=<YOUR_SMTP_PASSWORD> hussain9x/microsendmail:0.4
 ```
 Replace the environment variables' values and ContainerName with your own values.
